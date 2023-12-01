@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Senhas Fortes</title>
+    <style>
+        body {
+    font-family: 'Netflix Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #111, #000);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #e50914; /* Netflix red */
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#entradaSenha {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+#mostrarSenha {
+    margin-top: -10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #e50914; /* Netflix red */
+    text-decoration: underline;
+    display: block;
+}
+
+#mostrarSenha:hover {
+    color: #b20710; /* Darker red on hover */
+}
+
+#medidorPoder {
+    margin-top: 10px;
+    height: 20px;
+    width: 0;
+    background-color: #e50914; /* Netflix red */
+    border-radius: 5px;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+#requisitos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.requisito {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.vermelho {
+    color: #e50914; /* Netflix red */
+    transition: color 0.3s;
+}
+
+.verde {
+    color: #4bb543; /* Green */
+    transition: color 0.3s;
+}
+
+#textoPoder {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <p>Netflix</p>
+    </div>
+    <input type="password" id="entradaSenha" placeholder="Digite sua senha">
+    <span id="mostrarSenha">Mostrar Senha</span>
+
+    <div id="medidorPoder"></div>
+
+    <div id="requisitos">
+        <div id="requisitoComprimento" class="requisito">Comprimento</div>
+        <div id="requisitoMinuscula" class="requisito">Letra minúscula</div>
+        <div id="requisitoMaiuscula" class="requisito">Letra maiúscula</div>
+        <div id="requisitoNumero" class="requisito">Número</div>
+        <div id="requisitoSimbolo" class="requisito">Símbolo</div>
+    </div>
+
+    <div id="textoPoder"></div>
+    <script src="j.js"></script>
+</body>
+
+</html>
